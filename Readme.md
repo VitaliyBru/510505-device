@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Виталий Брюховецкий](https://up.htmlacademy.ru/htmlcss/21/user/510505).
-* Наставник: [Ксения Торкова](https://htmlacademy.ru/profile/id23249).
+* Наставник: [Макс Пушкарев](https://htmlacademy.ru/profile/id87167).
 
 ---
 
