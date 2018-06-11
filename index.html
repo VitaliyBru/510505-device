@@ -3,79 +3,83 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
 
     <header class="main-header">
-      <div class="header-top">
-        <div class="header-logo">
-          <a>
-            <img src="img/logo-header.png" alt="логотип">
+      <div class="header-block wraper">
+        <div class="header-top">
+          <a class="header-logo">
+            <img src="img/logo-header.png" width="164px" height="36px" alt="логотип">
           </a>
-        </div>
-        <form class="search" action="#">
-          <label for="search">Поиск по сайту</label>
-          <input id="search" class="search-field" type="text" name="find">
-          <button class="search" type="submit">
-            Найти
-          </button>
-        </form>
-        <div class="?"><!-- Контейнер обеспечивает смещение в право группе ссылок -->
-          <ul class="?"><!-- Группа ссылок для работы с аккаунтом пользователя -->
-            <li>
-              <a class="header-log-in" href="#">Войти</a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a class="header-compare" href="#">Сравнить</a>
-            </li>
-            <li>
-              <a class="header-cart" href="#">Корзина</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="header-bottom">
-        <div>
-          <a class="header-link catalogue" href="catalogue.html">каталог товаров</a>
-          <div class="drop-down-menu">
-            <ul class="drop-column">
+          <form class="search" action="#">
+            <input id="search" class="search-field" type="text" name="find">
+            <label for="search" class="search-label">Поиск по сайту</label>
+            <button class="search-btn" type="submit" tabindex="-1">
+              Найти
+            </button>
+          </form>
+          <div class="header-right-side">
+            <ul class="menu user-account">
               <li>
-                <a href="#">Витруальная реальность</a>
-              </li>
-              <li>
-                <a href="#">Моноподы для селфи</a>
-              </li>
-              <li>
-                <a href="#">Экшн-камеры</a>
+                <a class="menu-link header-login" href="#">Войти</a>
               </li>
             </ul>
-            <ul class="drop-column">
+            <ul class="menu buyer-actions">
               <li>
-                <a href="#">Фитнес-браслеты</a>
+                <a class="menu-link header-compare" href="#">Сравнить</a>
               </li>
               <li>
-                <a href="#">Умные часы</a>
+                <a class="menu-link header-cart" href="#">Корзина</a>
               </li>
-            </ul>
-            <ul class="drop-column">
-              <li><a href="#">Квадрокоптеры</a></li>
             </ul>
           </div>
         </div>
-        <ul class="service-links">
-          <li>
-            <a class="header-link delivery" href="#">доставка</a>
-          </li>
-          <li>
-            <a class="header-link warranty" href="#">гарантия</a>
-          </li>
-          <li>
-            <a class="header-link contact" href="#">контакты</a>
-          </li>
-        </ul>
+
+        <div class="header-bottom">
+          <div>
+            <a class="menu-link catalogue" href="catalogue.html">каталог товаров</a>
+            <div class="dropdown-menu">
+              <ul class="menu dropdown-menu-column">
+                <li>
+                  <a class="menu-link dropdown-menu-cell" href="#">Виртуальная реальность</a>
+                </li>
+                <li>
+                  <a class="menu-link dropdown-menu-cell"  href="catalog.html">Моноподы для селфи</a>
+                </li>
+                <li>
+                  <a class="menu-link dropdown-menu-cell"  href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+              <ul class="menu dropdown-menu-column">
+                <li>
+                  <a class="menu-link dropdown-menu-cell"  href="#">Фитнес-браслеты</a>
+                </li>
+                <li>
+                  <a class="menu-link dropdown-menu-cell"  href="#">Умные часы</a>
+                </li>
+              </ul>
+              <ul class="menu dropdown-menu-column">
+                <li>
+                  <a class="menu-link dropdown-menu-cell"  href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header-right-side">
+            <ul class="menu service-links">
+              <li>
+                <a class="menu-link delivery" href="#">доставка</a>
+              </li>
+              <li>
+                <a class="menu-link warranty" href="#">гарантия</a>
+              </li>
+            </ul>
+            <a class="menu-link contact" href="#">контакты</a>
+          </div>
+        </div>
       </div>
     </header>
 
