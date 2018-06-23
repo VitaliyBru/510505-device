@@ -410,8 +410,8 @@ input[id="promo-3"]:checked ~ .promo-frame-3 {
   right: 45px;
   font-family: "Gilroy", Arial, sans-serif;
   color: #fff;
-  font-size: 179.2px;
-  line-height: 179.2px;
+  font-size: 179px;
+  line-height: 179px;
   font-weight: 800;
   letter-spacing: .01em;
   z-index: -1;
@@ -489,6 +489,7 @@ input[id="promo-3"]:checked ~ .promo-frame-3 {
   min-height: 40px;
   box-sizing: border-box;
   text-decoration: none;
+
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -1726,6 +1727,29 @@ input[id="negative"] + .filters-radio-marker:active::before {
 
 .col-right-item:hover .item-hover {
   display: block;
+}
+
+.col-right__item--new::before {
+  content: "new";
+  position: absolute;
+  padding-top: 17px;
+  padding-left: 4px;
+  top: 29px;
+  right: 27px;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, .1);
+  border-radius: 50%;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: .05em;
+  color: rgba(0, 0, 0, .2);
+  text-transform: uppercase;
+  text-align: center;
 }
 
 /*----------------pagination-------------------*/
