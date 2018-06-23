@@ -697,7 +697,7 @@ input[id="promo-3"]:checked ~ .promo-frame-3 {
   content: "";
   top: 0;
   width: 0;
-  height: 40px;
+  height: 100%;
   background-color: #000;
 }
 
@@ -707,8 +707,8 @@ input[id="promo-3"]:checked ~ .promo-frame-3 {
 }
 
 .service-btn:active::after {
-  width: 117px;
-  right: -117px;
+  width: calc(277px - 100%);
+  left: 100%;
 }
 
 .service-btn:active,
