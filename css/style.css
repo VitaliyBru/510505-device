@@ -1101,6 +1101,7 @@ input[id="credit"]:checked ~ .service-credit {
   margin: 0 11px;
   width: 32px;
   height: 32px;
+  border-radius: 50%;
   opacity: .3;
 }
 
@@ -1787,7 +1788,20 @@ input[id="negative"] + .filters-radio-marker:active::before {
   color: rgba(0, 0, 0, 1);
 }
 
-
+.menu-link:focus,
+.nav-item:focus,
+input[id="delivery"]:focus ~ .service-control label[for="delivery"],
+input[id="warranty"]:focus ~ .service-control label[for="warranty"],
+input[id="credit"]:focus ~ .service-control label[for="credit"],
+.link-btn:focus,
+.footer-link:focus,
+.footer-social a:focus,
+.developement:focus,
+input:focus + .filters-check-box,
+input:focus + .filters-radio-marker {
+  outline: none;
+  box-shadow: 0 0 0 3px lightblue;
+}
 
 
 
