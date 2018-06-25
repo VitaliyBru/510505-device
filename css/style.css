@@ -405,7 +405,7 @@ input[id="promo-3"]:checked ~ .promo-frame-3 {
 .promo-frame-2::before,
 .promo-frame-3::before {
   position: absolute;
-  content: "";
+  content: attr(data-number);
   top: -13px;
   right: 45px;
   font-family: "Gilroy", Arial, sans-serif;
@@ -415,18 +415,6 @@ input[id="promo-3"]:checked ~ .promo-frame-3 {
   font-weight: 800;
   letter-spacing: .01em;
   z-index: -1;
-}
-
-.promo-frame-1::before {
-  content: "01";
-}
-
-.promo-frame-2::before {
-  content: "02";
-}
-
-.promo-frame-3::before {
-  content: "03";
 }
 
 .promo-image-contaner {
@@ -583,55 +571,54 @@ input[id="promo-3"]:checked ~ .promo-frame-3 {
 
 .nav-item::after {
   position: absolute;
-  content: "";
 }
 
 .virtual-reality::after {
+  content: url("../img/popular-1.svg");
   top: 52px;
   left: 31px;
   width: 97px;
   height: 55px;
-  background-image: url("../img/popular-1.svg");
 }
 
 .monopod::after {
+  content: url("../img/popular-2.svg");
   top: 41px;
   left: 38px;
   width: 86px;
   height: 117px;
-  background-image: url("../img/popular-2.svg");
 }
 
 .action-cam::after {
+  content: url("../img/popular-3.svg");
   top: 38px;
   left: 49px;
   width: 71px;
   height: 87px;
-  background-image: url("../img/popular-3.svg");
 }
 
 .smart-band:after {
+  content: url("../img/popular-4.svg");
   top: 50px;
   left: 28px;
   width: 107px;
   height: 65px;
-  background-image: url("../img/popular-4.svg");
 }
 
 .smart-watch:after {
+  content: url("../img/popular-5.svg");
   top: 32px;
   left: 55px;
   width: 56px;
   height: 98px;
-  background-image: url("../img/popular-5.svg");
 }
 
 .quadrocopter::after {
+  content: url("../img/popular-6.svg");
   top: 49px;
   left: 13px;
   width: 132px;
   height: 69px;
-  background-image: url("../img/popular-6.svg");
 }
 
 .nav-item:hover {
