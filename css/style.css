@@ -542,7 +542,7 @@ input[id="promo-3"]:checked ~ .promo-frame-3 {
   min-width: 140px;
 }
 
-.main-nav {
+.catalog-categories {
   display: flex;
   margin-bottom: 81px;
   padding: 0;
@@ -550,10 +550,9 @@ input[id="promo-3"]:checked ~ .promo-frame-3 {
   list-style: none;
 }
 
-.nav-item {
+.catalog-item {
   display: block;
   position: relative;
-  padding-top: 193px;
   width: 160px;
   min-height: 240px;
   box-sizing: border-box;
@@ -569,64 +568,51 @@ input[id="promo-3"]:checked ~ .promo-frame-3 {
   background-image: linear-gradient(to bottom, rgba(240, 197, 46, .5) 160px, #fff 160px);
 }
 
-.nav-item::after {
-  position: absolute;
+.catalog-item::before {
+  display: block;
+  content: "";
+  margin-bottom: 33px;
+  width: 160px;
+  height: 160px;
+  background-repeat: no-repeat;
 }
 
-.virtual-reality::after {
-  content: url("../img/popular-1.svg");
-  top: 52px;
-  left: 31px;
-  width: 97px;
-  height: 55px;
+.virtual-reality::before {
+  background-image: url("../img/popular-1.svg");
+  background-position: 31px 52px;
 }
 
-.monopod::after {
-  content: url("../img/popular-2.svg");
-  top: 41px;
-  left: 38px;
-  width: 86px;
-  height: 117px;
+.monopod::before {
+  background-image: url("../img/popular-2.svg");
+  background-position: 38px 41px;
 }
 
-.action-cam::after {
-  content: url("../img/popular-3.svg");
-  top: 38px;
-  left: 49px;
-  width: 71px;
-  height: 87px;
+.action-cam::before {
+  background-image: url("../img/popular-3.svg");
+  background-position: 49px 38px;
 }
 
-.smart-band:after {
-  content: url("../img/popular-4.svg");
-  top: 50px;
-  left: 28px;
-  width: 107px;
-  height: 65px;
+.smart-band:before {
+  background-image: url("../img/popular-4.svg");
+  background-position: 28px 50px;
 }
 
-.smart-watch:after {
-  content: url("../img/popular-5.svg");
-  top: 32px;
-  left: 55px;
-  width: 56px;
-  height: 98px;
+.smart-watch:before {
+  background-image: url("../img/popular-5.svg");
+  background-position: 55px 32px;
 }
 
-.quadrocopter::after {
-  content: url("../img/popular-6.svg");
-  top: 49px;
-  left: 13px;
-  width: 132px;
-  height: 69px;
+.quadrocopter::before {
+  background-image: url("../img/popular-6.svg");
+  background-position: 13px 49px;
 }
 
-.nav-item:hover {
+.catalog-item:hover {
   background-image: linear-gradient(to bottom, rgba(240, 197, 46, 1) 160px, #fff 160px);
 }
 
-.nav-item:active .nav-stage,
-.nav-item:active::after {
+.catalog-item:active .catalog-type,
+.catalog-item:active::before {
   opacity: .3;
 }
 
@@ -1439,6 +1425,7 @@ input[id="credit"]:checked ~ .service-credit {
 
 .range-line-gray {
   position: relative;
+  margin-bottom: 5px;
   width: 200px;
   height: 0;
   border-top: 1px solid #dbdbdb;
@@ -1447,10 +1434,10 @@ input[id="credit"]:checked ~ .service-credit {
 
 .range-line-green {
   position: absolute;
-  width: 60%;
+  width: 55%;
   height: 0;
   top: -1px;
-  left: 0;
+  left: 3%;
   border-top: 1px solid #91c92f;
   border-bottom: 1px solid #91c92f;
 }
@@ -1460,7 +1447,7 @@ input[id="credit"]:checked ~ .service-credit {
   border-radius: 50%;
   width: 20px;
   height: 23px;
-  top: -10px;
+  top: -11px;
   background-image: url("../img/filter-button.svg");
   cursor: pointer;
 }
@@ -1477,6 +1464,28 @@ input[id="credit"]:checked ~ .service-credit {
   transform-origin: center;
   transform: scale(1.1);
 }
+
+.range-slider-limit {
+  display: inline-block;
+}
+
+.range-slider-limit,
+.range-slider-price {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, .2);
+  background-color: transparent;
+}
+
+.range-slider-price {
+  width: 67px;
+  border: none;
+}
+
+.range-slider-max {}
 
 .filters-legend {
   font-family: "Gilroy", Arial, sans-serif;
@@ -1506,6 +1515,7 @@ input[id="credit"]:checked ~ .service-credit {
   font-weight: 300;
   line-height: 40px;
   letter-spacing: .013em;
+  color: #000;
 }
 
 .filters-check-box:hover::before {
@@ -1800,7 +1810,7 @@ input[id="negative"] + .filters-radio-marker:active::before {
 }
 
 .menu-link:focus,
-.nav-item:focus,
+.catalog-item:focus,
 input[id="delivery"]:focus ~ .service-control label[for="delivery"],
 input[id="warranty"]:focus ~ .service-control label[for="warranty"],
 input[id="credit"]:focus ~ .service-control label[for="credit"],
