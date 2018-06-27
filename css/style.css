@@ -58,7 +58,6 @@ body {
 }
 
 .header-block {
-  position: relative;
   margin-top: 40px;
   padding-top: 34px;
   padding-bottom: 1px;
@@ -182,7 +181,7 @@ body {
   justify-content: space-between;
 }*/
 
-.user-actions {
+.user-actions-header {
   display: flex;
   padding-top: 9px;
   width: 500px;
@@ -215,7 +214,7 @@ body {
   padding-left: 27px;
 }
 
-.header-logout {
+.user-logout-header {
   color: rgba(0, 0, 0, .3);
 }
 
@@ -505,6 +504,8 @@ input[id="promo-3"]:checked ~ .promo-frame-3 {
 
 .link-btn-promo {
   min-width: 220px;
+  margin-right: 180px;
+  word-break: break-all;
 }
 
 .link-btn:hover {
@@ -875,6 +876,7 @@ input[id="credit"]:checked ~ .service-credit {
 
 .link-btn-large {
   min-width: 260px;
+  word-break: break-all;
 }
 
 .location-map {
@@ -888,16 +890,17 @@ input[id="credit"]:checked ~ .service-credit {
 }
 
 .footer-content {
-  position: relative;
   padding-top: 60px;
 }
 
 .footer-top {
-  margin-bottom: 34px;
+  display: flex;
+  margin-bottom: 20px;
 }
 
-.user-actions {
+.user-actions-footer {
   display: flex;
+  margin-left: auto;
   justify-content: flex-end;
 }
 
@@ -922,9 +925,7 @@ input[id="credit"]:checked ~ .service-credit {
 }
 
 .logo-footer {
-  position: absolute;
-  top: 65px;
-  left: -1px;
+  margin-top: 5px;
 }
 
 .footer-link {
@@ -1629,6 +1630,7 @@ input[id="negative"] + .filters-radio-marker:active::before {
   border: none;
   background-color: #ebebeb;
   cursor: pointer;
+  word-break: break-all;
 }
 
 /*-----------------item cards---------------------*/
@@ -1704,6 +1706,7 @@ input[id="negative"] + .filters-radio-marker:active::before {
 .item-btn {
   min-width: 200px;
   border: none;
+  word-break: break-all;
 }
 
 .item-to-compare {
