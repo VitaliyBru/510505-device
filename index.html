@@ -11,31 +11,29 @@
     <header class="main-header wrapper">
       <div class="header-block">
         <div class="header-top">
-          <form class="search" action="#">
-            <input id="search" class="search-field" type="text" name="find">
-            <label for="search" class="search-label">Поиск по сайту</label>
-            <button class="search-btn" type="submit" tabindex="-1">
-              Найти
-            </button>
-          </form>
-          <a class="header-logo">
-            <img src="img/logo-header.png" width="164" height="36" alt="логотип">
-          </a>
-          <div class="header-right-side">
-            <ul class="reset-list user-account">
-              <li class="user-account-item">
-                <a class="menu-link header-login" href="#">Войти</a>
-              </li>
-            </ul>
-            <ul class="reset-list buyer-actions">
-              <li>
-                <a class="menu-link header-compare" href="#">Сравнить</a>
-              </li>
-              <li>
-                <a class="menu-link header-cart" href="#">Корзина</a>
-              </li>
-            </ul>
+          <div class="header-top-right">
+            <a class="header-logo">
+              <img src="img/logo-header.png" width="164" height="36" alt="логотип">
+            </a>
+            <form class="search" action="#">
+              <input id="search" class="search-field" type="text" name="find">
+              <label for="search" class="search-label">Поиск по сайту</label>
+              <button class="search-btn" type="submit" tabindex="-1">
+                Найти
+              </button>
+            </form>
           </div>
+          <ul class="reset-list user-actions">
+            <li class="user-item-login">
+              <a class="menu-link  user-login-header" href="#">Войти</a>
+            </li>
+            <li class="user-item-compare">
+              <a class="menu-link  user-compare-header" href="#">Сравнить</a>
+            </li>
+            <li>
+              <a class="menu-link  user-cart-header" href="#">Корзина</a>
+            </li>
+          </ul>
         </div>
 
         <div class="header-bottom">

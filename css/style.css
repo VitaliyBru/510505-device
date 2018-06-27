@@ -68,22 +68,27 @@ body {
 .header-top {
   display: flex;
   width: 1160px;
-  padding-left: 60px;
+  padding: 0 60px;
   margin-bottom: 29px;
   box-sizing: border-box;
   justify-content: space-between;
 }
 
+.header-top-right {
+  margin-top: -53px;
+  margin-left: -1px;
+}
+
 .header-logo {
-  position: absolute;
-  left: 60px;
-  top: -19px;
+  display: block;
+  margin-bottom: 7px;
 }
 
 .search {
   display: flex;
   position: relative;
-  height: 49px;
+  min-height: 49px;
+  border-top: 1px solid transparent;
 }
 
 .search::before {
@@ -142,7 +147,8 @@ body {
 
 .search-btn {
   display: none;
-  width: 85px;
+  min-width: 85px;
+  max-width: 330px;
   border: 2px solid #000;
   background-color: transparent;
 
@@ -167,24 +173,30 @@ body {
   color: rgba(255, 255, 255, .3);
 }
 
-.header-right-side {
+/*.header-right-side {
   display: flex;
   flex-shrink: 0;
   padding-right: 60px;
   box-sizing: border-box;
   width: 560px;
   justify-content: space-between;
-}
+}*/
 
-.user-account,
-.buyer-actions {
+.user-actions {
   display: flex;
   padding-top: 9px;
+  width: 500px;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
-.user-account-item {
+.user-item-login {
   margin-right: 19px;
+}
+
+.user-item-compare {
+  margin-left: auto;
+  margin-right: 40px;
 }
 
 .menu-link {
@@ -192,14 +204,14 @@ body {
   color: #000; 
 }
 
-.header-login,
-.header-compare,
-.header-cart {
+.user-login-header,
+.user-compare-header,
+.user-cart-header {
   display: block;
   position: relative;
 }
 
-.header-login {
+.user-login-header {
   padding-left: 27px;
 }
 
@@ -207,31 +219,30 @@ body {
   color: rgba(0, 0, 0, .3);
 }
 
-.header-compare{
+.user-compare-header{
   padding-left: 20px;
-  margin-right: 40px;
 }
 
-.header-cart {
+.user-cart-header {
   padding-left: 24px;
 }
 
-.header-login::before,
-.header-compare::before,
-.header-cart::before {
+.user-login-header::before,
+.user-compare-header::before,
+.user-cart-header::before {
   position: absolute;
   content: "";
   top: 9px;
   left: 0;
 }
 
-.header-login::before {
+.user-login-header::before {
   width: 13px;
   height: 12px;
   background-image: url("../img/user.svg");
 }
 
-.header-compare::before {
+.user-compare-header::before {
   top: 11px;
   left: 1px;
   width: 10px;
@@ -239,7 +250,7 @@ body {
   background-image: url("../img/compare.svg");
 }
 
-.header-cart::before {
+.user-cart-header::before {
   width: 12px;
   height: 12px;
   background-image: url("../img/cart.svg");
