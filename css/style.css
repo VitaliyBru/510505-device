@@ -260,7 +260,7 @@ body {
   display: flex;
   position: relative;
   width: 1160px;
-  padding-left: 60px;
+  padding: 0 60px;
   margin-bottom: 49px;
   box-sizing: border-box;
   justify-content: space-between;
@@ -274,9 +274,7 @@ body {
 }
 
 .dropdown-menu-trigger,
-.delivery,
-.warranty,
-.contact {
+.service-link-header {
   display: block;
   text-transform: uppercase;
 }
@@ -331,16 +329,24 @@ body {
 
 .service-links {
   display: flex;
+  width: 500px;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  flex-shrink: 0;
 }
 
-.service-links-item {
+.service-item {
   margin-right: 35px;
 }
 
-.contact {
+.service-item-contact {
+  margin-left: auto;
   margin-right: -4px;
+}
+
+.service-item,
+.service-item-contact {
+  min-width: 124px;
+  word-break: break-all;
 }
 
 
