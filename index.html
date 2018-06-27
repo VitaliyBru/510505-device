@@ -367,21 +367,15 @@
         <form class="feedback-form" action="#">
           <div class="feedback-field-small">
             <label class="feedback-label" for="name">Ваше имя:</label>
-            <br><!-- этот <br> временно -->
             <input class="feedback-input" id="name" type="text" name="sender[name]" placeholder="Имя Фамилия">
           </div>
           <div class="feedback-field-small">
             <label class="feedback-label" for="email">Ваш e-mail:</label>
-            <br><!-- этот <br> временно -->
             <input class="feedback-input" id="email" type="text" name="sender[email]" placeholder="email@example.com">
           </div>
-          <div class="feedback-field-large">
-            <label class="feedback-label" for="message">Текст письма:</label>
-            <br><!-- этот <br> временно -->
-            <textarea class="feedback-input-text" id="message" name="sender[text]" placeholder="В свободной форме"></textarea>
-            <br><!-- этот <br> временно -->
-            <input class="link-btn feedback-btn" type="submit" value="отправить">
-          </div>
+          <label class="feedback-label" for="message">Текст письма:</label>
+          <textarea class="feedback-input-text" id="message" name="sender[text]" placeholder="В свободной форме"></textarea>
+          <input class="link-btn feedback-btn" type="submit" value="отправить">
         </form>
         <button class="popup-close" type="button">
           <span class="visually-hidden">закрыть окно</span>

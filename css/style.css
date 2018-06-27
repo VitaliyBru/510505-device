@@ -1131,14 +1131,14 @@ input[id="credit"]:checked ~ .service-credit {
 
 .feedback-form {
   display: flex;
+  margin: 0 auto;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
+  width: 760px;
 }
 
 .feedback-field-small {
-  margin: 0 20px;
   margin-bottom: 40px;
   width: 360px;
 }
@@ -1166,10 +1166,6 @@ input[id="credit"]:checked ~ .service-credit {
   outline: none;
   border: none;
   background-color: #f2f2f2;
-}
-
-.feedback-field-large {
-  width: 760px;
 }
 
 .feedback-input-text {
