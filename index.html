@@ -299,7 +299,7 @@
               проверить работоспособность покупки. Всякое бывает
             </p>
             <img class="location-map" src="img/map.jpg" alt="расположение офиса на карте">
-            <a class="link-btn link-btn-large" href="#">напишите нам</a>
+            <a class="link-btn link-btn-large feedback-trigger" href="#">напишите нам</a>
           </div>
         </div>
       </div>
@@ -360,25 +360,28 @@
       </div>
     </footer>
 
-    <section class="feedback-popup">
-      <div class="feedback-content">
-        <form class="feedback-form" action="#">
-          <div class="feedback-field-small">
-            <label class="feedback-label" for="name">Ваше имя:</label>
-            <input class="feedback-input" id="name" type="text" name="sender[name]" placeholder="Имя Фамилия">
-          </div>
-          <div class="feedback-field-small">
-            <label class="feedback-label" for="email">Ваш e-mail:</label>
-            <input class="feedback-input" id="email" type="text" name="sender[email]" placeholder="email@example.com">
-          </div>
+    <div class="overlay">
+    </div>
+
+    <section class="feedback-content">
+      <form class="feedback-form" action="#">
+        <div class="feedback-field-small">
+          <label class="feedback-label" for="name">Ваше имя:</label>
+          <input class="feedback-input" id="name" type="text" name="sender[name]" placeholder="Имя Фамилия">
+        </div>
+        <div class="feedback-field-small">
+          <label class="feedback-label" for="email">Ваш e-mail:</label>
+          <input class="feedback-input" id="email" type="text" name="sender[email]"  placeholder="email@example.com">
+        </div>
+        <div class="feedback-field-large">
           <label class="feedback-label" for="message">Текст письма:</label>
-          <textarea class="feedback-input-text" id="message" name="sender[text]" placeholder="В свободной форме"></textarea>
-          <input class="link-btn feedback-btn" type="submit" value="отправить">
-        </form>
-        <button class="popup-close" type="button">
-          <span class="visually-hidden">закрыть окно</span>
-        </button>
-      </div>
+          <textarea class="feedback-input feedback-input-text" id="message" name="sender[text]" placeholder="В свободной форме"></textarea>
+        </div>
+        <input class="link-btn feedback-btn" type="submit" value="отправить">
+      </form>
+      <button class="popup-close" type="button">
+        <span class="visually-hidden">закрыть окно</span>
+      </button>
     </section>
     <section class="popup-map">
       <div class="popup-map-content">
@@ -391,5 +394,6 @@
       </div>
     </section>
 
+    <script src="js/script.js"></script>
   </body>
 </html>
