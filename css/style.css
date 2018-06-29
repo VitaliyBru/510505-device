@@ -882,6 +882,7 @@ input[id="credit"]:checked ~ .service-credit {
 .location-map {
   margin-top: 10px;
   margin-bottom: 59px;
+  cursor: pointer;
 }
 
 .main-footer {
@@ -1146,7 +1147,7 @@ input[id="credit"]:checked ~ .service-credit {
   right: 22px;
   width: 55px;
   height: 55px;
-  background-color: #fff;
+  background-color: transparent;
   border: none;
   outline: none;
   background-image: url("../img/modal-close.svg");
@@ -1236,8 +1237,16 @@ input[id="credit"]:checked ~ .service-credit {
   background-color: #edb5b5;
 }
 
-.popup-map-content {
-  position: relative;
+.map-popup {
+  display: none;
+  position: fixed;
+  bottom: 150px;
+  left: calc(50% - 480px);
+  width: 960px;
+  height: 560px;
+  background-color: #ecebe8;
+  background-image: url("../img/map-big.jpg");
+  z-index: 11;
 }
 
 .popup-visible {

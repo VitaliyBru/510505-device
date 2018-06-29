@@ -1,6 +1,8 @@
 'use strict';
 
+// Общая переменная
 var overlayEl = document.querySelector('.overlay');
+// Переменные используемые с окном обратной связи
 var feedbackTriggerEl = document.querySelector('.feedback-trigger');
 var feedbackEl = document.querySelector('.feedback-content');
 var feedbackFormEl = feedbackEl.querySelector('.feedback-form');
@@ -8,8 +10,12 @@ var closeFeedbackEl = feedbackEl.querySelector('.popup-close');
 var inputElts = feedbackEl.querySelectorAll('.feedback-input');
 var isLocalStorageSupport = true;
 var errorState = [];
+// Переменные используемые с картой
+var mapShowTrigger = document.querySelector('.location-map');
+var mapEl = document.querySelector('.map-popup');
+var closeMapEl = mapEl.querySelector('.popup-close');
 
-var openFedbackPopup = function() {
+var openFedbackPopup = function () {
   overlayEl.classList.add('popup-visible');
   feedbackEl.classList.add('popup-visible');
   feedbackPreset();
@@ -20,7 +26,7 @@ var openFedbackPopup = function() {
   feedbackFormEl.addEventListener('input', onInput);
 }
 
-var closeFedbackPopup = function() {
+var closeFedbackPopup = function () {
   overlayEl.classList.remove('popup-visible');
   feedbackEl.classList.remove('popup-visible');
   inputElts.forEach(function(it) { it.classList.remove('feedback-input--invalid'); });
@@ -31,9 +37,9 @@ var closeFedbackPopup = function() {
   feedbackFormEl.reset();
 }
 
-var feedbackPreset = function() {
+var feedbackPreset = function () {
   try {
-    inputElts.forEach(function(it) {
+    inputElts.forEach(function (it) {
       if (it.id !== 'message') {
         it.value = localStorage.getItem(it.id);
       }
@@ -43,7 +49,7 @@ var feedbackPreset = function() {
   }
 
   var isFocusSet = false;
-  inputElts.forEach(function(it) {
+  inputElts.forEach(function (it) {
     if (!it.value && !isFocusSet) {
       it.focus();
       isFocusSet = true;
@@ -51,7 +57,7 @@ var feedbackPreset = function() {
   });
 }
 
-var onInput = function(evt) {
+var onInput = function (evt) {
   if (evt.target.value && errorState[evt.target.id]) {
     evt.target.classList.remove('feedback-input--invalid');
     errorState[evt.target.id] = false;
@@ -61,10 +67,10 @@ var onInput = function(evt) {
   }
 }
 
-var onFormSubmit = function(evt) {
+var onFormSubmit = function (evt) {
   evt.preventDefault();
   var isFormCorrect = true;
-  inputElts.forEach(function(it) {
+  inputElts.forEach(function (it) {
     if (!it.value) {
       it.classList.add('feedback-input--invalid');
       isFormCorrect = false;
@@ -75,7 +81,7 @@ var onFormSubmit = function(evt) {
   });
   if (isFormCorrect) {
     if (isLocalStorageSupport) {
-      inputElts.forEach(function(it) {
+      inputElts.forEach(function (it) {
         if (it.id !== 'message') {
           localStorage.setItem(it.id, it.value);
         }
@@ -86,16 +92,31 @@ var onFormSubmit = function(evt) {
   }
 }
 
-var onClosefeedbackClick = function(evt) {
+var onClosefeedbackClick = function (evt) {
   evt.preventDefault();
   closeFedbackPopup();
 }
 
 var onOverlayClick = onClosefeedbackClick;
 
-var onFeedbackTriggerClick = function(evt) {
+var onFeedbackTriggerClick = function (evt) {
   evt.preventDefault();
   openFedbackPopup();
 }
 
+var onMapTriggerClick = function () {
+  overlayEl.classList.add('popup-visible');
+  mapEl.classList.add('popup-visible');
+  mapShowTrigger.removeEventListener('click', onMapTriggerClick);
+  closeMapEl.addEventListener('click', onCloseMapClick);
+}
+
+var onCloseMapClick = function () {
+  overlayEl.classList.remove('popup-visible');
+  mapEl.classList.remove('popup-visible');
+  mapShowTrigger.addEventListener('click', onMapTriggerClick);
+  closeMapEl.removeEventListener('click', onCloseMapClick);
+}
+
 feedbackTriggerEl.addEventListener('click', onFeedbackTriggerClick);
+mapShowTrigger.addEventListener('click', onMapTriggerClick);
