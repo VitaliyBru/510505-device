@@ -17,7 +17,7 @@ var closeMapEl = mapEl.querySelector('.popup-close');
 
 var openFedbackPopup = function () {
   overlayEl.classList.add('popup-visible');
-  feedbackEl.classList.add('popup-visible');
+  feedbackEl.classList.add('popup-visible', 'feedback-show-up');
   feedbackPreset();
   feedbackTriggerEl.removeEventListener('click', onFeedbackTriggerClick);
   mapShowTrigger.removeEventListener('click', onMapTriggerClick);
@@ -30,7 +30,7 @@ var openFedbackPopup = function () {
 
 var closeFedbackPopup = function () {
   overlayEl.classList.remove('popup-visible');
-  feedbackEl.classList.remove('popup-visible');
+  feedbackEl.classList.remove('popup-visible', 'feedback-show-up');
   inputElts.forEach(function(it) { it.classList.remove('feedback-input--invalid'); });
   feedbackTriggerEl.addEventListener('click', onFeedbackTriggerClick);
   mapShowTrigger.addEventListener('click', onMapTriggerClick);
@@ -121,7 +121,7 @@ var onFeedbackTriggerClick = function (evt) {
 
 var onMapTriggerClick = function () {
   overlayEl.classList.add('popup-visible');
-  mapEl.classList.add('popup-visible');
+  mapEl.classList.add('popup-visible', 'map-show-up');
   mapShowTrigger.removeEventListener('click', onMapTriggerClick);
   feedbackTriggerEl.removeEventListener('click', onFeedbackTriggerClick);
   overlayEl.addEventListener('click', onCloseMapClick);
@@ -131,7 +131,7 @@ var onMapTriggerClick = function () {
 
 var onCloseMapClick = function () {
   overlayEl.classList.remove('popup-visible');
-  mapEl.classList.remove('popup-visible');
+  mapEl.classList.remove('popup-visible', 'map-show-up');
   mapShowTrigger.addEventListener('click', onMapTriggerClick);
   feedbackTriggerEl.addEventListener('click', onFeedbackTriggerClick);
   overlayEl.removeEventListener('click', onCloseMapClick);

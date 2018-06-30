@@ -1254,6 +1254,44 @@ input[id="credit"]:checked ~ .service-credit {
   display: block;
 }
 
+@keyframes feedback-animation {
+  from {
+    transform: translate(0, -600px);
+  }
+  50% {
+    transform: scale(1);
+  }
+  70% {
+    transform: translate(0, 25px) scale(1.1, .95);
+  }
+  to {
+    transform: translate(0) scale(1);
+  }
+}
+
+@keyframes map-animation {
+  from {
+    transform: translate(240px, 270px) scale(.3);
+    opacity: .2;
+  }
+  70% {
+    opacity: 1;
+  }
+  to {
+    transform: translate(0) scale(1);}
+}
+
+.map-show-up {
+  animation-name: map-animation;
+  animation-duration: 600ms;
+}
+
+.feedback-show-up {
+  animation-name: feedback-animation;
+  animation-timing-function: linear;
+  animation-duration: 500ms;
+}
+
 /*------------------catalogue content-------------------------*/
 
 
