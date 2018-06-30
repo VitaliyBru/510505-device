@@ -1240,12 +1240,13 @@ input[id="credit"]:checked ~ .service-credit {
 .map-popup {
   display: none;
   position: fixed;
-  bottom: 150px;
+  top: 15%;
   left: calc(50% - 480px);
   width: 960px;
   height: 560px;
   background-color: #ecebe8;
   background-image: url("../img/map-big.jpg");
+  box-shadow: 0 10px 20px rgba(4, 6, 6, .2);
   z-index: 11;
 }
 
