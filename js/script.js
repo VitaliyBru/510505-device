@@ -19,7 +19,8 @@ var closeMapEl = mapEl.querySelector('.popup-close');
 
 var openFedbackPopup = function () {
   overlayEl.classList.add('popup-visible');
-  feedbackEl.classList.add('popup-visible', 'feedback-show-up');
+  feedbackEl.classList.add('popup-visible');
+  feedbackEl.classList.add('feedback-show-up');
   feedbackPreset();
   feedbackTriggerEl.removeEventListener('click', onFeedbackTriggerClick);
   mapShowTrigger.removeEventListener('click', onMapTriggerClick);
@@ -127,7 +128,8 @@ var onFeedbackTriggerClick = function (evt) {
 
 var onMapTriggerClick = function () {
   overlayEl.classList.add('popup-visible');
-  mapEl.classList.add('popup-visible', 'map-show-up');
+  mapEl.classList.add('popup-visible');
+  mapEl.classList.add('map-show-up');
   mapShowTrigger.removeEventListener('click', onMapTriggerClick);
   feedbackTriggerEl.removeEventListener('click', onFeedbackTriggerClick);
   overlayEl.addEventListener('click', onCloseMapClick);
