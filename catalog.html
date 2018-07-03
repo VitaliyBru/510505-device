@@ -3,60 +3,58 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс-Каталог</title>
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
   </head>
   <body>
 
     <header class="main-header wrapper">
       <div class="header-block">
         <div class="header-top">
-          <form class="search" action="#">
-            <input id="search" class="search-field" type="text" name="find">
-            <label for="search" class="search-label">Поиск по сайту</label>
-            <button class="search-btn" type="submit" tabindex="-1">
-              Найти
-            </button>
-          </form>
-          <a href="index.html" class="header-logo">
-            <img src="img/logo-header.png" width="164px" height="36px" alt="логотип">
-          </a>
-          <div class="header-right-side">
-            <ul class="reset-list user-account">
-              <li>
-                <a class="menu-link header-login" href="#">Валентин Петухов</a>
-              </li>
-              <li>
-                <a class="menu-link header-logout" href="#">Выйти</a>
-              </li>
-            </ul>
-            <ul class="reset-list buyer-actions">
-              <li>
-                <a class="menu-link header-compare" href="#">Сравнить</a>
-              </li>
-              <li>
-                <a class="menu-link header-cart" href="#">Корзина</a>
-              </li>
-            </ul>
+          <div class="header-top-right">
+            <a class="header-logo" href="index.html">
+              <img src="img/logo-header.png" width="164" height="36" alt="логотип">
+            </a>
+            <form class="search" action="https://echo.htmlacademy.ru" method="get">
+              <input id="search" class="search-field" type="text" name="find">
+              <label for="search" class="search-label">Поиск по сайту</label>
+              <button class="search-btn" type="submit" tabindex="-1">
+                Найти
+              </button>
+            </form>
           </div>
+          <ul class="reset-list user-actions-header">
+            <li class="user-item-login">
+              <a class="menu-link user-login-header" href="#">Валентин Петухов</a>
+            </li>
+            <li class="user-item-login">
+              <a class="menu-link user-logout-header" href="#">Выйти</a>
+            </li>
+            <li class="user-item-compare">
+              <a class="menu-link  user-compare-header" href="#">Сравнить</a>
+            </li>
+            <li>
+              <a class="menu-link  user-cart-header" href="#">Корзина</a>
+            </li>
+          </ul>
         </div>
 
-        <div class="header-bottom">
+        <nav class="header-bottom">
           <div>
-            <a class="menu-link catalogue" href="catalogue.html">каталог товаров</a>
-            <div class="dropdown-menu">
-              <ul class="reset-list dropdown-menu-column">
+            <a class="menu-link dropdown-menu-trigger" href="#">каталог товаров</a>
+            <div class="dropdown-menu-content">
+              <ul class="reset-list">
                 <li>
                   <a class="menu-link dropdown-menu-cell" href="#">Виртуальная реальность</a>
                 </li>
                 <li>
-                  <a class="menu-link dropdown-menu-cell"  href="catalog.html">Моноподы для селфи</a>
+                  <a class="menu-link dropdown-menu-cell"  href="#">Моноподы для селфи</a>
                 </li>
                 <li>
                   <a class="menu-link dropdown-menu-cell"  href="#">Экшн-камеры</a>
                 </li>
               </ul>
-              <ul class="reset-list dropdown-menu-column">
+              <ul class="reset-list">
                 <li>
                   <a class="menu-link dropdown-menu-cell"  href="#">Фитнес-браслеты</a>
                 </li>
@@ -64,31 +62,31 @@
                   <a class="menu-link dropdown-menu-cell"  href="#">Умные часы</a>
                 </li>
               </ul>
-              <ul class="reset-list dropdown-menu-column">
+              <ul class="reset-list">
                 <li>
                   <a class="menu-link dropdown-menu-cell"  href="#">Квадрокоптеры</a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="header-right-side">
-            <ul class="reset-list service-links">
-              <li>
-                <a class="menu-link delivery" href="#">доставка</a>
-              </li>
-              <li>
-                <a class="menu-link warranty" href="#">гарантия</a>
-              </li>
-            </ul>
-            <a class="menu-link contact" href="#">контакты</a>
-          </div>
-        </div>
+          <ul class="reset-list service-links">
+            <li class="service-item">
+              <a class="menu-link service-link-header" href="#">доставка</a>
+            </li>
+            <li class="service-item">
+              <a class="menu-link service-link-header" href="#">гарантия</a>
+            </li>
+            <li class="service-item-contact">
+              <a class="menu-link service-link-header" href="#">контакты</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <main class="main-content">
-      <div class="wrapper main-content-header">
-        <h2 class="main-heading">Моноподы для селфи</h2>
+    <main class="catalog">
+      <div class="wrapper catalog-header">
+        <h2 class="catalog-heading">Моноподы для селфи</h2>
         <ul class="breadcrumbs reset-list">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-nav" href="index.html">Главная</a>
@@ -102,12 +100,11 @@
         </ul>
       </div>
 
-      <div class="row-title">
-        <div class="void-holder void-left-top"></div>
-        <div class="col-left-head">
+      <div class="catalog-body">
+        <div class="catalog-left-block  catalog-left-block-header">
           <span class="col-title">фильтр:</span>
         </div>
-        <div class="col-right-head">
+        <div class="catalog-right-block  catalog-right-block-header">
           <span class="col-title">сортировка:</span>
           <ul class="sort-by reset-list">
             <li>
@@ -133,12 +130,8 @@
             </li>
           </ul>
         </div>
-        <div class="void-holder void-right-top"></div>
-      </div>
-      <div class="row-title">
-        <div class="void-holder void-left-bottom"></div>
-        <div class="col-left">
-          <form class="filters-form" action="#">
+        <div class="catalog-left-block">
+          <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
             <div class="range-slider">
               <p class="range-title">Стоимость</p>
               <div class="range-line-gray">
@@ -146,6 +139,14 @@
                   <span class="slider-button button-left"></span>
                   <span class="slider-button button-right"></span>
                 </div>
+              </div>
+              <div class="range-slider-limit">
+                <span>от</span>
+                <input type="number" name="price[min]" value="0" class="range-slider-price">
+              </div>
+              <div class="range-slider-limit">
+                <span>до</span>
+                <input type="number" name="price[max]" value="5000" class="range-slider-price">
               </div>
             </div>
             <fieldset class="filters-colors">
@@ -189,10 +190,10 @@
             <input class="link-btn filters-btn" type="submit" value="показать">
           </form>
         </div>
-        <div class="">
+        <div class="catalog-right-block catalog-right-block-stock">
           <ul class="col-right reset-list">
             <li class="col-right-item">
-              <img class="item-image" src="img/item-1.jpg" width="360px" height="380px" alt="Любительская селфи-палка">
+              <img class="item-image" src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
               <div class="item-info">
                 <h3 class="item-title">Любительская селфи-палка</h3>
                 <span class="item-price">500 руб.</span>
@@ -203,7 +204,7 @@
               </div>
             </li>
             <li class="col-right-item">
-              <img class="item-image" src="img/item-2.jpg" width="360px" height="380px" alt="Профессиональная селфи-палка">
+              <img class="item-image" src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
               <div class="item-info">
                 <h3 class="item-title">Профессиональная<br>селфи-палка</h3>
                 <span class="item-price">1 500 руб.</span>
@@ -214,7 +215,7 @@
               </div>
             </li>
             <li class="col-right-item">
-              <img class="item-image" src="img/item-3.jpg" width="360px" height="380px" alt="Непотопляемая селфи-палка">
+              <img class="item-image" src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
               <div class="item-info">
                 <h3 class="item-title">Непотопляемая селфи-палка</h3>
                 <span class="item-price">2 500 руб.</span>
@@ -224,8 +225,8 @@
                 <a class="item-to-compare" href="#">Добавить к сравнению</a>
               </div>
             </li>
-            <li class="col-right-item">
-              <img class="item-image" src="img/item-4.jpg" alt="Селфи-палка «Следуй за мной»">
+            <li class="col-right-item  col-right__item--new">
+              <img class="item-image" src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
               <div class="item-info">
                 <h3 class="item-title">Селфи-палка «Следуй за мной»</h3>
                 <span class="item-price">4 900 руб.</span>
@@ -254,17 +255,17 @@
             </li>
           </ul>
         </div>
-        <div class="void-holder right-space"></div>
       </div>
+    </main>
 
     <footer class="main-footer">
       <div class="wrapper">
         <div class="footer-content">
           <div class="footer-top">
-            <a href="index.html" class="logo-footer">
-              <img src="img/logo-footer.png" alt="логотип">
+            <a class="logo-footer" href="index.html">
+              <img src="img/logo-footer.png" width="163" height="36" alt="логотип">
             </a>
-            <ul class="reset-list user-actions">
+            <ul class="reset-list user-actions-footer">
               <li>
                 <a class="footer-link footer-login" href="#">Валентин Петухов</a>
               </li>
