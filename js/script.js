@@ -50,7 +50,7 @@ var closePopup = function () {
 };
 
 var onEscKeyDown = function (evt) {
-  if (evt.key === 'Escape') {
+  if (evt.key === 'Escape' || evt.key === 'Esc') {
     closePopup();
   }
 };
