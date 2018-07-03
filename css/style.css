@@ -1467,6 +1467,18 @@ input[id='credit']:checked ~ .service-credit {
   }
 }
 
+@keyframes invalid {
+  33.3% {
+    transform: translateX(10px);
+  }
+  66.6% {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .map-show-up {
   animation-name: map-animation;
   animation-duration: 600ms;
@@ -1476,6 +1488,12 @@ input[id='credit']:checked ~ .service-credit {
   animation-name: feedback-animation;
   animation-duration: 500ms;
   animation-timing-function: linear;
+}
+
+.feedback-content--invalid {
+  animation-name: invalid;
+  animation-duration: 100ms;
+  animation-iteration-count: 3;
 }
 
 /*------------------catalogue content-------------------------*/

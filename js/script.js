@@ -1,5 +1,6 @@
 'use strict';
 
+var POPUP_BOUNDS_DURATION = 300;
 // Общая переменная
 var overlayEl = document.querySelector('.overlay');
 // Переменные используемые с окном обратной связи
@@ -105,6 +106,10 @@ var onFormSubmit = function (evt) {
     }
     feedbackFormEl.submit();
     closeFedbackPopup();
+  } else {
+    feedbackEl.classList.remove('feedback-show-up');
+    feedbackEl.classList.add('feedback-content--invalid');
+    setTimeout(function () { feedbackEl.classList.remove('feedback-content--invalid') }, POPUP_BOUNDS_DURATION);
   }
 };
 
