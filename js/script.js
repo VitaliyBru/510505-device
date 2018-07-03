@@ -7,7 +7,8 @@ var feedbackTriggerEl = document.querySelector('.feedback-trigger');
 var feedbackEl = document.querySelector('.feedback-content');
 var feedbackFormEl = feedbackEl.querySelector('.feedback-form');
 var closeFeedbackEl = feedbackEl.querySelector('.popup-close');
-var inputElts = feedbackEl.querySelectorAll('.feedback-input');
+var inputElts = Array.prototype.slice.call(feedbackEl.querySelectorAll(
+    '.feedback-input'));
 var isLocalStorageSupport = true;
 var errorState = [];
 // Переменные используемые с картой
@@ -26,7 +27,7 @@ var openFedbackPopup = function () {
   feedbackFormEl.addEventListener('submit', onFormSubmit);
   feedbackFormEl.addEventListener('input', onInput);
   document.addEventListener('keydown', onEscKeyDown);
-}
+};
 
 var closeFedbackPopup = function () {
   overlayEl.classList.remove('popup-visible');
@@ -39,18 +40,18 @@ var closeFedbackPopup = function () {
   feedbackFormEl.removeEventListener('submit', onFormSubmit);
   feedbackFormEl.reset();
   document.removeEventListener('keydown', onEscKeyDown);
-}
+};
 
 var closePopup = function () {
   feedbackEl.classList.contains('popup-visible') ? closeFedbackPopup()
       : onCloseMapClick();
-}
+};
 
 var onEscKeyDown = function (evt) {
   if (evt.key === 'Escape') {
     closePopup();
   }
-}
+};
 
 var feedbackPreset = function () {
   try {
@@ -70,7 +71,7 @@ var feedbackPreset = function () {
       isFocusSet = true;
     }
   });
-}
+};
 
 var onInput = function (evt) {
   if (evt.target.value && errorState[evt.target.id]) {
@@ -80,7 +81,7 @@ var onInput = function (evt) {
     evt.target.classList.add('feedback-input--invalid');
     errorState[evt.target.id] = true;
   }
-}
+};
 
 var onFormSubmit = function (evt) {
   evt.preventDefault();
@@ -105,19 +106,19 @@ var onFormSubmit = function (evt) {
     feedbackFormEl.submit();
     closeFedbackPopup();
   }
-}
+};
 
 var onClosefeedbackClick = function (evt) {
   evt.preventDefault();
   closeFedbackPopup();
-}
+};
 
 var onOverlayClick = onClosefeedbackClick;
 
 var onFeedbackTriggerClick = function (evt) {
   evt.preventDefault();
   openFedbackPopup();
-}
+};
 
 var onMapTriggerClick = function () {
   overlayEl.classList.add('popup-visible');
@@ -127,7 +128,7 @@ var onMapTriggerClick = function () {
   overlayEl.addEventListener('click', onCloseMapClick);
   closeMapEl.addEventListener('click', onCloseMapClick);
   document.addEventListener('keydown', onEscKeyDown);
-}
+};
 
 var onCloseMapClick = function () {
   overlayEl.classList.remove('popup-visible');
@@ -137,7 +138,7 @@ var onCloseMapClick = function () {
   overlayEl.removeEventListener('click', onCloseMapClick);
   closeMapEl.removeEventListener('click', onCloseMapClick);
   document.removeEventListener('keydown', onEscKeyDown);
-}
+};
 
 feedbackTriggerEl.addEventListener('click', onFeedbackTriggerClick);
 mapShowTrigger.addEventListener('click', onMapTriggerClick);
