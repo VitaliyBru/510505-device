@@ -108,7 +108,7 @@
           <span class="col-title">сортировка:</span>
           <ul class="sort-by reset-list">
             <li>
-              <a href="#" class="sort-by-item">По цене</a>
+              <a href="#" class="sort-by-item  sort-by-item-current">По цене</a>
             </li>
             <li>
               <a href="#" class="sort-by-item">По типу</a>
@@ -117,14 +117,14 @@
               <a href="#" class="sort-by-item">По популярности</a>
             </li>
           </ul>
-          <ul class="reset-list sort-by sort-by-direction">
+          <ul class="reset-list sort-by  sort-by-direction">
             <li>
               <a href="#" class="sort-by-asc">
                 <span class="visually-hidden">по возрастанию</span>
               </a>
             </li>
             <li>
-              <a href="#" class="sort-by-desc">
+              <a href="#" class="sort-by-desc  sort-by-type-current">
                 <span class="visually-hidden">по убыванию</span>
               </a>
             </li>
@@ -206,7 +206,12 @@
             <li class="col-right-item">
               <img class="item-image" src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
               <div class="item-info">
-                <h3 class="item-title">Профессиональная<br>селфи-палка</h3>
+                <h3 class="item-title">
+                  Профессиональная
+                    <span class="item-title-nowrap">
+                      селфи-палка
+                    </span>
+                </h3>
                 <span class="item-price">1 500 руб.</span>
               </div>
               <div class="item-hover">
@@ -239,19 +244,19 @@
           </ul>
           <ul class="pagination reset-list">
             <li class="pagination-item-ends">
-              <a href="#" class="pagination-link step-to">назад</a>
+              <a href="#" class="pagination-link  step-to">назад</a>
             </li>
             <li>
-              <a href="#" class="pagination-link page-number">1</a>
+              <a href="#" class="pagination-link  page-number  page-number-current">1</a>
             </li>
             <li>
-              <a href="#" class="pagination-link page-number">2</a>
+              <a href="#" class="pagination-link  page-number">2</a>
             </li>
             <li>
-              <a href="#" class="pagination-link page-number">3</a>
+              <a href="#" class="pagination-link  page-number">3</a>
             </li>
             <li class="pagination-item-ends">
-              <a href="#" class="pagination-link step-to">вперед</a>
+              <a href="#" class="pagination-link  step-to">вперед</a>
             </li>
           </ul>
         </div>
@@ -284,13 +289,13 @@
             <p class="footer-address">г. Москва, ул. Строителей, 15</p>
             <ul class="reset-list service-links-footer">
               <li>
-                <a class="footer-link footer-delivery" href="#">доставка</a>
+                <a class="footer-link service-links__item" href="#">доставка</a>
               </li>
               <li>
-                <a class="footer-link footer-warranty" href="#">гарантия</a>
+                <a class="footer-link service-links__item" href="#">гарантия</a>
               </li>
               <li>
-                <a class="footer-link footer-contact" href="#">контакты</a>
+                <a class="footer-link service-links__item" href="#">контакты</a>
               </li>
             </ul>
             <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
