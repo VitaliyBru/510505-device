@@ -715,20 +715,25 @@ input[id='promo-3']:checked ~ .promo-frame-3 {
 }
 
 .catalog-categories {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 
-  margin-bottom: 81px;
-  padding: 0;
+    margin-bottom: 81px;
+    margin-left: -40px;
+    margin-top: -60px;
+    padding: 0;
 
-  list-style: none;
+    list-style: none;
 
-  -webkit-box-pack: justify;
+    -ms-flex-wrap: wrap;
 
-      -ms-flex-pack: justify;
+        flex-wrap: wrap;
+}
 
-          justify-content: space-between;
+.catalog__item-container {
+    margin-left: 40px;
+    margin-top: 60px;
 }
 
 .catalog-item {
@@ -994,11 +999,15 @@ input[id='credit']:checked ~ .service-credit {
   display: -ms-flexbox;
   display: flex;
 
-  -webkit-box-pack: justify;
+  margin-left: -40px;
 
-      -ms-flex-pack: justify;
+  -ms-flex-wrap: wrap;
 
-          justify-content: space-between;
+      flex-wrap: wrap;
+}
+
+.brands-item {
+  margin-left: 40px;
 }
 
 .logo-1 {
@@ -1097,6 +1106,7 @@ input[id='credit']:checked ~ .service-credit {
 
   margin: 0;
   margin-bottom: 30px;
+  padding-right: 40px;
 
   letter-spacing: .008em;
 
@@ -1327,25 +1337,25 @@ input[id='credit']:checked ~ .service-credit {
   display: flex;
 
   min-width: 437px;
+  max-width: 670px;
   margin-right: 37px;
   padding-top: 3px;
 
-  -webkit-box-pack: justify;
+  -ms-flex-wrap: wrap;
 
-      -ms-flex-pack: justify;
-
-          justify-content: space-between;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.footer-delivery,
-.footer-warranty,
-.footer-contact {
+.service-links__item {
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 24px;
 
-  padding: 0 5px;
+  padding: 0 17px;
 
   letter-spacing: .2em;
   text-transform: uppercase;
@@ -1379,17 +1389,13 @@ input[id='credit']:checked ~ .service-credit {
 }
 
 .logo-footer:hover,
-.footer-delivery:hover,
-.footer-warranty:hover,
-.footer-contact:hover,
+.service-links__item:hover,
 .developement:hover {
   opacity: .6;
 }
 
 .logo-footer:active,
-.footer-delivery:active,
-.footer-warranty:active,
-.footer-contact:active,
+.service-links__item:active,
 .developement:active {
   opacity: .3;
 }
@@ -1885,15 +1891,18 @@ input[id='credit']:checked ~ .service-credit {
   display: -ms-flexbox;
   display: flex;
 
+  max-width: 450px;
   margin-bottom: 3px;
   margin-left: 14px;
 
-  -ms-flex-negative: 0;
+  -ms-flex-wrap: wrap;
 
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
       flex-shrink: 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1919,11 +1928,13 @@ input[id='credit']:checked ~ .service-credit {
   color: rgba(0, 0, 0, .6);
 }
 
+.sort-by-item-current,
 .sort-by-item:active {
   color: rgba(0, 0, 0, 1);
 }
 
 .sort-by-direction {
+  max-width: 45px;
   margin-left: auto;
 }
 
@@ -1952,6 +1963,7 @@ input[id='credit']:checked ~ .service-credit {
   opacity: .4;
 }
 
+.sort-by-type-current,
 .sort-by-asc:active,
 .sort-by-desc:active {
   opacity: 1;
@@ -2004,7 +2016,7 @@ input[id='credit']:checked ~ .service-credit {
 
   width: 200px;
   height: 0;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 
   border-top: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb;
@@ -2054,6 +2066,8 @@ input[id='credit']:checked ~ .service-credit {
 
 .range-slider-limit {
   display: inline-block;
+
+  vertical-align: top;
 }
 
 .range-slider-limit,
@@ -2297,6 +2311,11 @@ input[id='negative'] + .filters-radio-marker:active::before {
   color: #000;
 }
 
+.item-title-nowrap {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
 .item-price {
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 16px;
@@ -2473,6 +2492,7 @@ input[id='negative'] + .filters-radio-marker:active::before {
   color: rgba(0, 0, 0, .6);
 }
 
+.page-number-current,
 .page-number:active {
   color: rgba(0, 0, 0, 1);
 }
