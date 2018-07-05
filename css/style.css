@@ -222,11 +222,11 @@ body {
   width: 500px;
   padding-top: 9px;
 
-  -webkit-box-pack: end;
+  -webkit-box-pack: start;
 
-      -ms-flex-pack: end;
+      -ms-flex-pack: start;
 
-          justify-content: flex-end;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
